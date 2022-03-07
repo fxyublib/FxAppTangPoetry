@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    implementation files('libs/pinyin4j-2.5.0.jar')
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.fxyublib.android.FxAppTangPoetry"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            //"${variant.name}-${variant.versionName}.apk"
+            outputFileName = "FxAppTangPoetry-${variant.name}-${defaultConfig.versionName}-${releaseTime()}.apk"
+        }
+    }
+    /*
+    //在apk文件后边生成版本号信息
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.each {
+                output -> output.outputFile = new File(output.outputFile.parent, "app_${defaultConfig.applicationId }_"+ buildType.name + "_v${defaultConfig.versionName}-${releaseTime()}.apk");
+            }
+    }*/
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+    implementation 'androidx.navigation:navigation-ui:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

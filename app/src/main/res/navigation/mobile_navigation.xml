@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_tang">
+
+    <fragment
+        android:id="@+id/nav_tang"
+        android:name="com.fxyublib.android.FxAppTangPoetry.ui.Tang.MainFragment"
+        android:label="@string/menu_tang"
+        tools:layout="@layout/fragment_tang" />
+
+    <fragment
+        android:id="@+id/nav_song"
+        android:name="com.fxyublib.android.FxAppTangPoetry.ui.Song.MainFragment"
+        android:label="@string/menu_song"
+        tools:layout="@layout/fragment_tang" />
+
+    <fragment
+        android:id="@+id/nav_classics"
+        android:name="com.fxyublib.android.FxAppTangPoetry.ui.Classics.ClassicsFragment"
+        android:label="@string/menu_classics"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_favorite"
+        android:name="com.fxyublib.android.FxAppTangPoetry.ui.Others.FavoriteFragment"
+        android:label="@string/menu_favorite"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.fxyublib.android.FxAppTangPoetry.ui.Others.SettingFragment"
+        android:label="@string/menu_setting"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.fxyublib.android.FxAppTangPoetry.ui.Others.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_send" />
+</navigation>

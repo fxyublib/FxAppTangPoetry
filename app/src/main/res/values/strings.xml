@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">唐诗宋词(FxYubSoft)</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">唐诗宋词</string>
+    <string name="nav_header_subtitle">hifisher@163.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">设置</string>
+
+    <string name="menu_tang">唐诗</string>
+    <string name="menu_song">宋词</string>
+    <string name="menu_classics">国学</string>
+    <string name="menu_favorite">我的收藏</string>
+    <string name="menu_setting">字体设置</string>
+    <string name="menu_about">关于软件</string>
+
+    <string name="search_item1">作者</string>
+    <string name="search_item2">标题</string>
+    <string name="search_item3">内容</string>
+
+</resources>
